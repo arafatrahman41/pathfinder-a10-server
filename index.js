@@ -4,11 +4,9 @@ const app = express();
 require('dotenv').config()
 const port = process.env.PORT || 5000;
 
+// middleware
 app.use(cors());
 app.use(express.json());
-
-// pathfinder-a10
-// ncfpf98X2y0bnSQ3
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
