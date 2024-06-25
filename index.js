@@ -28,7 +28,13 @@ async function run() {
     // await client.connect();
 
     const spotCollection = client.db("spotDB").collection('spot');
+    // read
+    app.get("/touristSpot", async(req, res) => {
+      const result = await spotCollection.find().toArray();
+      res.send(result)
+    })
 
+    // crate
     app.post("/touristSpot", async (req, res) => {
       const newSpot = req.body;
       console.log(newSpot);
