@@ -42,7 +42,7 @@ async function run() {
       res.send(result)
     })
 
-    // crate
+    // create
     app.post("/touristSpot", async (req, res) => {
       const newSpot = req.body;
       console.log(newSpot);
